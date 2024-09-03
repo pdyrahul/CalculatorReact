@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  height: 100vh;
+  width: 100vw;
+  background: url(bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator {
+  background: rgba(107, 94, 94, 0.17);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+ box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.57) , inset 10px 10px 10px rgba(255, 255, 255, 0.57);
+  height: 80vh;
+  width: 30vw;
+  min-width: 350px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-top: 4px;
+}
+.display{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 10px;
+  height: 15vh;
+
+  margin-bottom: 20px;
+}
+
+
+.input {
+  height: 7vh;
+  width: 21.8vw;
+  min-width: 270px;
+  background-color:transparent;
+  backdrop-filter: blur(10px);
   color: white;
+
+  font-size: 16px;
+  outline: none;
+  font-weight: 500;
+  border: none;
+  
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.row {
+  height: 10vh;
+  width: 22vw;
+  min-width: 270px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 5px;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  border-radius: 5px;
+  height: 8vh;
+  width: 5vw;
+  min-width: 60px;
+  margin-left: 4px;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 2px solid white;
+  outline: none;
+  transition: 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+@media (max-width: 950px) {
+  .container {
+      width: 50vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  .buttons{
+        
+    min-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+  .row {
+      width: 38vw;
+  }
+
+  .button {
+      width: 8vw;
+  }
+
+  .input {
+      width: 38vw;
   }
 }
