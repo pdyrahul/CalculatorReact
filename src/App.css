@@ -83,6 +83,12 @@ button {
   outline: none;
   transition: 0.3s;
 }
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
 button:hover {
   cursor: pointer;
